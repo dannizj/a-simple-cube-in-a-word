@@ -1,0 +1,59 @@
+# Normalize line endings on commit, native on checkout
+* text=auto
+
+# ---------------------------------------------------------------
+# C#
+# ---------------------------------------------------------------
+*.cs           text diff=csharp
+
+# ---------------------------------------------------------------
+# Unity YAML assets: field-level merge with UnityYAMLMerge
+# Requires the merge driver to be registered locally:
+#   git config --global merge.unityyamlmerge.name "Unity SmartMerge"
+#   git config --global merge.unityyamlmerge.driver
+#     '"C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/Tools/UnityYAMLMerge.exe" merge -p %O %B %A %A'
+# ---------------------------------------------------------------
+*.unity              text merge=unityyamlmerge eol=lf
+*.prefab             text merge=unityyamlmerge eol=lf
+*.asset              text merge=unityyamlmerge eol=lf
+*.mat                text merge=unityyamlmerge eol=lf
+*.meta               text merge=unityyamlmerge eol=lf
+*.anim               text merge=unityyamlmerge eol=lf
+*.controller         text merge=unityyamlmerge eol=lf
+*.overrideController text merge=unityyamlmerge eol=lf
+*.physicMaterial     text merge=unityyamlmerge eol=lf
+*.physicsMaterial2D  text merge=unityyamlmerge eol=lf
+*.playable           text merge=unityyamlmerge eol=lf
+*.preset             text merge=unityyamlmerge eol=lf
+*.signal             text merge=unityyamlmerge eol=lf
+*.mask               text merge=unityyamlmerge eol=lf
+
+# ---------------------------------------------------------------
+# Binary assets
+# ---------------------------------------------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.psd   binary
+*.tga   binary
+*.tif   binary
+*.tiff  binary
+*.exr   binary
+*.hdr   binary
+*.fbx   binary
+*.obj   binary
+*.blend binary
+*.max   binary
+*.ma    binary
+*.mb    binary
+*.wav   binary
+*.mp3   binary
+*.ogg   binary
+*.aiff  binary
+*.dll   binary
+*.so    binary
+*.a     binary
+*.lib   binary
+*.ttf   binary
+*.otf   binary
